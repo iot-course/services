@@ -1,0 +1,34 @@
+service: service-starter
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+
+package:
+  individually: true   # comment out during developemnt
+  exclude:
+    - ./**
+
+plugins:
+  - serverless-webpack
+  - serverless-dynamodb-local
+
+custom:
+  webpackIncludeModules: true
+
+
+functions:
+  hello:
+    handler: lib/hello.handler
+    events:
+     - http:
+         path: hello
+         method: any
+         cors: true
+  graphql:
+    handler: lib/graphql.handler
+    events:
+     - http:
+         path: graphql
+         method: any
+         cors: true
