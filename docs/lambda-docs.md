@@ -2,7 +2,7 @@
 ## `http ⇒ λ graphQL ⇒ cb`
 
 
-responds to graphQL query
+Responds to graphQL query according to spec
 
 
 **Callback / External Call:**
@@ -13,14 +13,14 @@ graphql(schema, query)
 
 arg / param | type | path
 --- | --- | ---
-`query` | `Object` | `event.body`
+`query` | `Object` | `event.body.query`
 `schema` | `Object` | `new GraphQLSchema({ query:queryType })`
 <br/> 
 
 ## `http ⇒ λ hello ⇒ cb`
 
 
-GETs this message `hi 🤖 ☁️ 📱` and standard event payload
+GETs this message: `hi 🤖 ☁️ 📱` and merges it to the standard http event
 
 
 **Callback / External Call:**

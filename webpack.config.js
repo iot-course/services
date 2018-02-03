@@ -7,7 +7,7 @@ const options = JSON.parse(res.getBody('utf8'))
 
 module.exports = {
   entry: entries,
-  // stats: 'minimal',
+  stats: 'minimal',
   target: 'node',
   externals: [nodeExternals()],
   module:{ rules: [
