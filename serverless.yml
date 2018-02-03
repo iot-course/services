@@ -16,7 +16,6 @@ plugins:
 custom:
   webpackIncludeModules: true
 
-
 functions:
   hello:
     handler: lib/hello.handler
