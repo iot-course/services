@@ -1,8 +1,8 @@
 {
   "scripts": {
     "dev": "sls invoke local -f $fn  -p tests/events/$fn.json  --watch",
-    "db": "sls dynamodb start --migrate &",
     "test": "jest",
+    "docs": "lambda-docs-2md ./lib",
     "push": "git add -A && git commit -m \"$msg\" && git push"
   },
   "devDependencies": {
